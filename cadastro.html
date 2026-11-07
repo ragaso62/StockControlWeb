@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro | StockControl</title>
+</head>
+<body>
+    <!--CABEÇALHO-->
+    <header class="cabecalho">
+        <div class="container cabecalho_conteudo">
+            <a href="index.html">StockControl</a>
+            <nav aria-label="menu principal">
+                <ul class="menu">
+                    <li>
+                        <a href="index.html">Inicio</a>
+                    </li>
+                    <li>
+                        <a href="produtos.html">Produtos</a>
+                    </li>
+                    <li>
+                        <a href="cadastro.html" aria-current="page">Cadastro</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!--CONTEUDO PRINCIPAL-->
+    <main>
+        <section class="titulo-pagina">
+            <div class="container">
+                <h1>Solicite uma demostração</h1>
+                <p>
+                    Preencha os dados abaixo para conhecer melhor o StockControl.
+                </p>
+            </div>
+        </section>
+        <!--Area do formulario-->
+        <section class="secao-formulario">
+            <div class="container">
+                <form class="formulario" action="#" method="post">
+                    <h2>Dados do interessado</h2>
+                    <!--CAMPO NOME-->
+                        <div class="grupo-campo">
+                            <label for="nome">
+                                Nome completo:
+                            </label>
+                            <input type="text" name="nome" id="nome" placeholder="Digite seu nome completo" required minlength="3" autocomplete="name">
+                        </div>
+                       <!--CAMPO E-MAIL-->
+                       <div class="grupo-campo">
+                            <label for="email">
+                                E-mail:
+                            </label>
+                            <input type="email" name="email" id="email" placeholder="exemplo@email.com" required autocomplete="email">
+                       </div> 
+                       <!--COMAPO TELEFONE-->
+                       <div class="grupo-campo">
+                            <label for="telefone">
+                                Telefone:
+                            </label>
+                            <input type="tel" name="telefone" id="telefone" placeholder="(34) 99999-9999" autocomplete="tel">
+                       </div>
+                       <!--CAMPO EMPRESA-->
+                       <div class="grupo-campo">
+                        <label for="empresa">
+                            Nome empresa:
+                        </label>
+                        <input type="text" name="empresa" id="emrpesa" placeholder="Digite o nome da empresa" required autocapitalize="organization">
+                       </div>
+                       <!--CAMPO DE SELEÇÃO-->
+                       <div class="grupo-campo">
+                        Segmento da empresas
+                       </select>
+                        <label for="segmento">
+                            <select name="segmento" id="segmento" required>
+                                <option value="">Selecione uma opção</option>
+                                <option value="comercio">comércio</option>
+                                <option value="industria">Indústria</option>
+                                <option value="servicos">Prestação de serviçoes</option>
+                                <option value="outros">Outros</option>
+                        </label>
+                       </div>
+                       <!--CAMPO DE TEXTO-->
+                       <div class="grupo-campo">
+                        <label for="mensagem">
+                            Conte-nos um pouco da sua necessidade:
+                        </label>
+                        <textarea name="mensagem" id="mensagem" rows="5" placeholder="Digite sua mensagem"></textarea>
+                       </div>
+                       <!--CAMPO DE AUTORIZAÇÃO-->
+                       <div class="grupo-campo">
+                        <input type="checkbox" name="autautorizacao" id="autautorizacao" required>
+                        <label for="autautorizacao">
+                            Autorizo o contato para apresentação da solução.
+                        </label>
+                       </div>
+                       <!--BOTÕES-->
+                       <div class="acoes-formulario">
+                        <button type="submit" class="botao botao-principal">
+                            Enviar solicitação
+                        </button>
+                        <button type="reset" class="botao botao-limpar">
+                            Limpar formulário
+                        </button>
+                       </div>
+                </form>
+            </div>
+        </section>
+    </main>
+    <footer class="rodape">
+        <div class="container">
+            <p>
+                &copy; 2026 StockControl
+                Todos os direitos reservados
+            </p>
+            <p>
+                Projeto educacional desenvolvido com HTML 5 e CSS3
+            </p>
+        </div>
+    </footer>
+</body>
+</html>
