@@ -1,0 +1,474 @@
+/*variaveis e configurações gerais*/
+
+:root{
+    --cor-principal: #173B63;
+    --cor-segundaria: #2876B9;
+    --cor-destaque: #E9F3FC;
+
+    --cor-texto: #263445;
+    --cor-texto-claro: #64748B;
+
+    --cor-fundo: #f5f7fa;
+    --cor-branco: #FFFFFF;
+
+    --cor-sucesso: #198754;
+    --cor-alerta: #D18A17;
+    --cor-erro: #dc3545;
+    --sombra: 0 4px 15px rgba(0, 0, 0, 0.8);
+
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--cor-texto);
+    background-color: var(--cor-fundo);
+    line-height: 1.6;
+}
+
+/*configurações padrão dos links*/
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+/*imagens não ultrapassem o espço disponível*/
+img{
+    max-width: 100%;
+    display: block  ;
+}
+
+/*classe utilizada para centralizar o conteudo*/
+.container{
+    width: 90%;
+    max-width: 1150px;
+    margin: 0 auto;
+}
+
+/*cabeçalho e menu de navegação*/
+.cabecalho{
+    background-color: var(--cor-principal);
+    color: var(--cor-branco);
+    padding: 20px 0 ;
+}
+
+.cabecalho-conteudo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+/*logo do projeto*/
+.logo{
+    font-size: 25px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/*remove os marcadores da lista*/
+.menu{
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+/*links do menu*/
+.menu a{
+    color:  var(--cor-branco);
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+/*efeito de transição ao passr o mouse*/
+.menu a:hover, .menu a [aria-current="page"]{
+    color: #a9d7ff;
+}
+
+/*pagina inicial - destaque*/
+.destaque{
+    background-color: var(--cor-destaque);
+    padding: 90px 0;
+}
+
+.destaque-conteudo{
+    display: flex;
+    align-items: center;
+    min-height: 250px;
+}
+
+.destaque-texto{
+    max-width: 700px;
+}
+
+.destaque h1{
+    font-size: 42px;
+    color: var(--cor-principal);
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.destaque p{
+    font-size: 18px;
+    color: var(--cor-texto-claro);
+    margin-bottom: 30px;
+}
+
+/*Agrupamento dos botões*/
+.botoes{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+/*botões*/
+.botao{
+    display: inline-block;
+    padding: 12px 22px;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: bold;
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/*botão principal*/
+.botao-principal{
+    background-color: var(--cor-segundaria);
+    color: var(--cor-branco);
+}
+
+.botao-principal:hover{
+    background-color: var(--cor-principal);
+}
+
+/*botão segundario*/
+.botao-secundario{
+    border-color: var(--cor-segundaria);
+    color: var(--cor-segundaria);
+}
+
+.botao-secundario:hover{
+    background-color: var(--cor-segundaria);
+    color: var(--cor-branco);
+}
+
+/*botão para limpar o formulario*/
+.botao-limpar{
+    background-color: #e2e8f0;
+    color: var(--cor-texto);
+}
+
+.botao-limpar:hover{
+    background-color: #cdb5e1;
+}
+
+/*seção de  beneficio*/
+.beneficios{
+    padding: 70px 0;
+
+}
+.titulo-secao{
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.titulo-secao h2{
+    color: var(--cor-principal);
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.titulo-secao p{
+    color: var(--cor-texto-claro);
+}
+
+/*organizar os beneficios em colunas*/
+.beneficios-lista{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.beneficio{
+    background-color: var(--cor-branco);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: var(--sombra);
+}
+
+.beneficio h3{
+    color: var(--cor-segundaria);
+    margin-bottom: 12px;
+}
+
+.beneficio p{
+    color: var(--cor-texto-claro);
+}
+
+/*estilização da chamada para ação*/
+.chamada{
+    background-color: var(--cor-principal);
+    color: var(--cor-branco);
+    padding: 55px 20px;
+    text-align: center;
+}
+
+.chamada h2{
+    font-size: 28px;
+    margin-bottom: 12px;
+}
+
+.chamada p{
+    margin-bottom: 25px;
+}
+
+/*titulo das paginas internas*/
+
+.titulo-pagina{
+    background-color: var(--cor-destaque);
+    padding: 50px 0;
+    text-align: center;
+}
+
+.titulo-pagina h1{
+    color: var(--cor-principal);
+    font-size: 34px;
+    margin-bottom: 10px;
+}
+
+.titulo-pagina p{
+    color: var(--cor-texto-claro);
+
+}
+
+/*estilizar cards produtos*/
+.secao-produtos{
+    padding: 60px 0;
+}
+
+/*grid que organiza os cards*/
+.card-produtos{
+    display: grid;
+    grid-template-columns: 3, 1fr;
+    gap: 25px;
+}
+
+/*estrutura individual do card*/
+.card-produto{
+    background-color: var(--cor-branco);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: var(--sombra);
+    transition: transform 0.3s;
+}
+
+.card-produto:hover{
+    transform: translateY(-5px);
+}
+
+/*imagem do produto*/
+.card-produto img{
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+    background-color: #F1F5F9;
+    padding: 15px;
+}
+
+/*area de informações do card*/
+.card-conteudo{
+    padding: 22px;
+}
+
+/*categoria do produto*/
+.categoria{
+    color: var(--cor-segundaria);
+    font-size: 13px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.card-conteudo h2{
+    color: var(--cor-principal);
+    font-size: 21px;
+    margin: 8px 0;
+
+}
+
+.card-conteudo p{
+    color: var(--cor-texto-claro);
+    margin-bottom: 12px;
+}
+
+/*preço do produto*/
+.card-conteudo .preco{
+    color: var(--cor-principal);
+    font-size: 23px;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+.card-conteudo .quantidade{
+    font-size: 14px;
+}
+
+/*situação do estoque*/
+.status{
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.status-desponivel{
+    background-color: #d1fae5;
+    color: var(--cor-sucesso);
+}
+
+.status-baixo{
+    background-color: #fef3c7;
+    color: #92400e;
+}
+
+.status-esgotado{
+    background-color: #fee2e2;
+    color: var(--cor-erro);
+}
+
+/*fromulario*/
+.secao-formulario{
+    padding: 60px 0;
+}
+
+/*caixa principal do formualario*/
+.formulario{
+    background-color: var(--cor-branco);
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 35px;
+    border-radius: 10px;
+    box-shadow: var(--sombra);
+}
+
+.formulario h2{
+    color: var(--cor-principal);
+    margin-bottom: 25px;
+}
+
+/*grupo label e seu campo*/
+.grupo-campo{
+    margin-bottom: 20px;
+}
+
+.grupo-campo label{
+    display: block;
+    font-weight: bold;
+    margin-bottom: 7px
+}
+
+/*estilização do grupo de entrada*/
+.grupo-campo input, .grupo-campo select, .grupo-campo textarea{
+    width: 100%;
+    border: 1px solid #cbd5e1;
+    border-radius: 6pz;
+    font-family: inherit;
+    font-size: 15px;
+}
+
+/*destaque visual no campo*/
+.grupo-campo input:focus, .grupo-campo select:focus, .grupo-campo textarea:focus{
+    outline: 2px solid var(--cor-segundaria);
+    border-color: var(--cor-segundaria);
+}
+
+/*permite redimencionar verticalmente os campos de mensagem*/
+.grupo-campo textarea{
+    resize:vertical;
+}
+
+/*checkbox e seu texto*/
+.grupo-checkbox{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.grupo-checkbox input{
+    margin-top: 5px;
+}
+
+.acoes-formulario{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 25px;
+}
+
+/*rodapé*/
+.rodape{
+    background-color: #102b48;
+    color: var(--cor-branco);
+    padding: 25px 0;
+    text-align: center;
+}
+
+.rodape p{
+    font-size: 14px;
+    margin: 5px 0;
+}
+
+/*ajustes para tablets e telas menores*/
+@media(max-width: 900px){
+    .card-produtos, .beneficios-lista{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+/*ajustes para celulares*/
+@media(max-width: 600px){
+    .cabecalho-conteudo{
+        flex-direction: column;
+    }
+
+    .menu{
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .destaque h1{
+        font-size: 30px;
+    }
+
+    .destaque{
+        padding: 60px 0;
+    }
+
+    .botoes{
+        flex-direction: column;
+    }
+
+    .botao{
+        text-align: center;
+    }
+
+    .card-produtos, .beneficios-lista{
+        grid-template-columns: 1fr;
+    }
+
+    .formulario{
+        padding: 22px;
+    }
+
+    .titulo-pagina h1{
+        font-size: 27px;
+    }
+}

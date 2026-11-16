@@ -2,6 +2,7 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro | StockControl</title>
 </head>
@@ -9,7 +10,7 @@
     <!--CABEÇALHO-->
     <header class="cabecalho">
         <div class="container cabecalho_conteudo">
-            <a href="index.html">StockControl</a>
+            <a href="index.html" class="logo">StockControl</a>
             <nav aria-label="menu principal">
                 <ul class="menu">
                     <li>
@@ -70,16 +71,18 @@
                        </div>
                        <!--CAMPO DE SELEÇÃO-->
                        <div class="grupo-campo">
-                        Segmento da empresas
+                        
                        </select>
                         <label for="segmento">
+                            Segmento da empresas
+                        </label> 
                             <select name="segmento" id="segmento" required>
                                 <option value="">Selecione uma opção</option>
                                 <option value="comercio">comércio</option>
                                 <option value="industria">Indústria</option>
                                 <option value="servicos">Prestação de serviçoes</option>
                                 <option value="outros">Outros</option>
-                        </label>
+                            </select>
                        </div>
                        <!--CAMPO DE TEXTO-->
                        <div class="grupo-campo">
@@ -89,7 +92,7 @@
                         <textarea name="mensagem" id="mensagem" rows="5" placeholder="Digite sua mensagem"></textarea>
                        </div>
                        <!--CAMPO DE AUTORIZAÇÃO-->
-                       <div class="grupo-campo">
+                       <div class="grupo-checkbox">
                         <input type="checkbox" name="autautorizacao" id="autautorizacao" required>
                         <label for="autautorizacao">
                             Autorizo o contato para apresentação da solução.
